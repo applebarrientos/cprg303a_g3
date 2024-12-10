@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, Modal, StyleSheet } from "react-native";
 import { useRouter } from "expo-router";
 
 export default function TopMenu() {
   const [modalVisible, setModalVisible] = useState(false);
   const router = useRouter();
+
+  // Function to set the document title
+  const updateTitle = (title) => {
+    if (typeof document !== "undefined") {
+      document.title = title;
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -16,6 +23,7 @@ export default function TopMenu() {
           <TouchableOpacity
             onPress={() => {
               router.push("/");
+              updateTitle("Basic Calculator");
               setModalVisible(false);
             }}
           >
@@ -24,6 +32,7 @@ export default function TopMenu() {
           <TouchableOpacity
             onPress={() => {
               router.push("/scientific");
+              updateTitle("Scientific Calculator");
               setModalVisible(false);
             }}
           >
@@ -31,11 +40,12 @@ export default function TopMenu() {
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {
-              router.push("/converter");
+              router.push("/conversion");
+              updateTitle("Conversion");
               setModalVisible(false);
             }}
           >
-            <Text style={styles.menuItem}>Converter</Text>
+            <Text style={styles.menuItem}>Conversion</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setModalVisible(false)}>
             <Text style={styles.closeButton}>Close</Text>

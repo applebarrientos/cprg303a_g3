@@ -2,36 +2,14 @@ import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
 export default function ScientificCalculator() {
-  const operations = [
-    "RAD",
-    "√",
-    "n√",
-    "π",
-    "INV",
-    "^",
-    "!",
-    "MOD",
-    "SIN",
-    "COS",
-    "TAN",
-    "EXP",
-    "e",
-    "LN",
-    "LOG",
-    "()",
-  ];
-
   return (
     <View style={styles.container}>
-      <Text style={styles.display}>0</Text>
-      <View style={styles.row}>
-        {operations.slice(0, 4).map((op) => (
-          <TouchableOpacity key={op} style={styles.button}>
-            <Text style={styles.buttonText}>{op}</Text>
-          </TouchableOpacity>
-        ))}
+      {/* Your components and functionality can go here  */}
+
+      {/* Footer displaying the page/screen name */}
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>Scientific Calculator</Text>
       </View>
-      {/* Add the rest of the rows similarly */}
     </View>
   );
 }
@@ -57,5 +35,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  buttonText: { fontSize: 20 },
+  buttonText: {
+    fontSize: 20,
+  },
+  footer: {
+    backgroundColor: "#000",
+    padding: 10,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  footerText: {
+    color: "#848884",
+    fontSize: 16,
+  },
 });

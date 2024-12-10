@@ -1,37 +1,14 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
-export default function BasicCalculator() {
+export default function Conversion() {
   return (
     <View style={styles.container}>
-      {/* Your components and functionality can go here */}
-
-      <Text style={styles.display}>0</Text>
-      <View style={styles.row}>
-        {["AC", "÷", "x", "⌫"].map((op) => (
-          <TouchableOpacity key={op} style={styles.button}>
-            <Text style={styles.buttonText}>{op}</Text>
-          </TouchableOpacity>
-        ))}
-      </View>
-      {[
-        [7, 8, 9, "-"],
-        [4, 5, 6, "+"],
-        [1, 2, 3, "="],
-        [".", 0, "%", ""],
-      ].map((row, index) => (
-        <View key={index} style={styles.row}>
-          {row.map((val) => (
-            <TouchableOpacity key={val} style={styles.button}>
-              <Text style={styles.buttonText}>{val}</Text>
-            </TouchableOpacity>
-          ))}
-        </View>
-      ))}
+      {/* Your components and functionality can go here  */}
 
       {/* Footer displaying the page/screen name */}
       <View style={styles.footer}>
-        <Text style={styles.footerText}>Basic Calculator</Text>
+        <Text style={styles.footerText}>Conversion</Text>
       </View>
     </View>
   );
