@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 48,
     textAlign: "right",
-    marginBottom: 20,
+    marginTop: -40,
   },
   row: {
     flexDirection: "row",
@@ -219,9 +219,9 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
-    margin: 5,
+    margin: 3,
     backgroundColor: "gold",
-    padding: 20,
+    padding: 15,
     justifyContent: "center",
     alignItems: "center",
   },
